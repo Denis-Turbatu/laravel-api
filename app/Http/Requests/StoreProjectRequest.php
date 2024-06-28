@@ -23,7 +23,6 @@ class StoreProjectRequest extends FormRequest
     {
         return [
             'title' => ['required', 'min:10'],
-            'thumb' => ['required'],
             'description' => ['required', 'min:20'],
             'start_date' => ['required'],
             'end_date' => ['required'],
