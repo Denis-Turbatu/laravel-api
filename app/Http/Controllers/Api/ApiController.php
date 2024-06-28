@@ -19,6 +19,7 @@ class ApiController extends Controller
         // impacchettamento di $project e formattazione della response API
         $data = [
             'result' => $projects,
+            'success' => true,
         ];
 
         // ritorno una risposta in formatto json del pacchetto formattato

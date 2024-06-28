@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Api\ApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 // nel URL '/projects' richiamo il metodo index() presente in ProjectController
-Route::get('/projects', [ProjectController::class, 'index']);
+Route::get('/projects', [ApiController::class, 'index']);
