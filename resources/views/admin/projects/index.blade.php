@@ -13,8 +13,8 @@
                 class="px-4 py-2 bg-success text-decoration-none text-white rounded-2">Crea</a>
         </div>
         <div class="row">
-            <table class="table">
-                <thead>
+            <table class="table bdr">
+                <thead class="bg-red">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Titolo</th>
@@ -38,7 +38,7 @@
                                         class="btn btn-primary">Dettagli</a>
                                     <a href="{{ route('admin.projects.edit', ['project' => $progetto->slug]) }}"
                                         class="btn btn-success
-                                        ">Modifica</a>
+                                            ">Modifica</a>
                                     <form action="{{ route('admin.projects.destroy', ['project' => $progetto->slug]) }}"
                                         method="POST">
                                         @csrf
@@ -51,6 +51,7 @@
                     @endforeach
                 </tbody>
             </table>
+
         </div>
     </div>
 @endsection

@@ -1,3 +1,6 @@
 @use './partials/technologies_index' as *;
+@use './partials/dashboard_layout' as *;
+@use './partials/admin_dashboard_layout' as *;
+@use './partials/projects_index' as *;
 
 @import "~bootstrap/scss/bootstrap";
