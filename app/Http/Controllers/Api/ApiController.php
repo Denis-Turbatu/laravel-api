@@ -26,4 +26,16 @@ class ApiController extends Controller
         return response()->json($data);    
     }
 
+    public function show(string $projects)
+    {
+        $projects = Project::with(['type', 'technologies'])->where('slug', $projects)->first();
+
+        $data = [
+            'result' => $projects,
+            'success' => true,
+        ];
+
+        return response()->json($data);
+    }
+
 }
