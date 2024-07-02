@@ -27,7 +27,7 @@
 
             <div class="mb-3">
                 <label for="thumb" class="form-label fw-semibold">Immagine</label>
-                <input type="text" class="form-control @error('thumb') is-invalid @enderror" id="thumb"
+                <input type="file" class="form-control @error('thumb') is-invalid @enderror" id="thumb"
                     name="thumb" value="{{ old('thumb') }}">
             </div>
 
@@ -57,9 +57,10 @@
                 <div class="form-check d-flex flex-column">
                     @foreach ($technologies as $tech)
                         <div class="my-2">
-                            <input @checked(in_array($tech->id, old('technologies', []))) class="form-check-input" type="checkbox" value="{{$tech->id}}" id="technology-{{$tech->id}}" name="technologies[]">
-                            <label class="form-check-label" for="technology-{{$tech->id}}">
-                                {{$tech->name}}
+                            <input @checked(in_array($tech->id, old('technologies', []))) class="form-check-input" type="checkbox"
+                                value="{{ $tech->id }}" id="technology-{{ $tech->id }}" name="technologies[]">
+                            <label class="form-check-label" for="technology-{{ $tech->id }}">
+                                {{ $tech->name }}
                             </label>
                         </div>
                     @endforeach

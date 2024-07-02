@@ -20,7 +20,6 @@ class ProjectsTableSeeder extends Seeder
         for ($i = 0; $i < 10; $i++) {
             $newProject = new Project();
             $newProject->title = $faker->sentence(3);
-            $newProject->thumb = $faker->imageUrl(640, 480, true);
             $newProject->description = $faker->paragraph();
             $newProject->start_date = $faker->dateTimeBetween('0 week', '+1 week');;
             $newProject->end_date = $faker->dateTimeBetween('+5 week', '+6 week');;
