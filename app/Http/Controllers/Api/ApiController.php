@@ -15,7 +15,8 @@ class ApiController extends Controller
     {
         // Estrazione di tutti i progetti in $project
         // $projects = Project::all();
-        $projects = Project::paginate(6);
+        // $projects = Project::paginate(6);
+        $projects = Project::with(['type', 'technologies'])->paginate(6);
 
         // impacchettamento di $project e formattazione della response API
         $data = [
