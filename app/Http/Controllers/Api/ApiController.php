@@ -14,7 +14,8 @@ class ApiController extends Controller
     public function index()
     {
         // Estrazione di tutti i progetti in $project
-        $projects = Project::all();
+        // $projects = Project::all();
+        $projects = Project::paginate(6);
 
         // impacchettamento di $project e formattazione della response API
         $data = [
