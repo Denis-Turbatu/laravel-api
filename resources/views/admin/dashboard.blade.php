@@ -4,19 +4,16 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 mt-4">
-                <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
-
-                    <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-
-                        {{ __('You are logged in!') }}
+                <div class="ms-alert text-emerald bg-emerald d-flex justify-content-center align-items-center" role="alert">
+                    <section class="w-50">
+                        <h2>{{ __('Dashboard') }}</h2>
+                        <p>{{ __('Hai effettuato il login!') }} {{ Auth::user()->name }}</p>
+                    </section>
+                    <div class="w-50 text-end fs-2">
+                        <i class="fa-regular fa-circle-check"></i>
                     </div>
-                </div>
+                </div>  
+
             </div>
         </div>
     </div>
